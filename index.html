@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="gu">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Resume Builder</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="container">
+      <h1>AI Resume Builder</h1>
+      <p>ઝડપથી સુંદર અને પ્રોફેશનલ રિઝ્યુ બનાવો — AI સાથે.</p>
+    </div>
+  </header>
+
+  <main class="container main-grid">
+    <section class="card form-card">
+      <h2>તમારા વિવરણ ભરો</h2>
+      <label>ફુલ નામ</label>
+      <input id="fullname" placeholder="ઉદાહરણ: અરુણ પટેલ" />
+
+      <label>જોબ ટાઇટલ</label>
+      <input id="title" placeholder="ઉદાહરણ: ફ્રન્ટએન્ડ ડેવલપર" />
+
+      <label>સ્થાન</label>
+      <input id="location" placeholder="City, Country" />
+
+      <label>કોન્ટેક્ટ / લિંક્સ</label>
+      <input id="contact" placeholder="Email • Phone • LinkedIn" />
+
+      <label>વર્ક એક્સપિરિયન્સ (બુલેટ માટે ; થી અલગ)</label>
+      <textarea id="work" placeholder="Role | Company | Years | Bullet1; Bullet2"></textarea>
+
+      <label>એજ્યુકેશન (line by line)</label>
+      <textarea id="education" placeholder="Degree | Institute | Year"></textarea>
+
+      <label>Skills (comma separated)</label>
+      <input id="skills" placeholder="HTML, CSS, JavaScript" />
+
+      <div class="actions">
+        <button id="generateBtn">Generate Resume with AI</button>
+        <button id="clearBtn" class="secondary">Clear</button>
+      </div>
+
+      <p class="hint">Deploy કરવા અગાઉ, backend endpoint યોગ્ય રીતે સેટ કરો (દાખલા: /api/generate-resume)</p>
+    </section>
+
+    <aside class="card preview-card">
+      <h2>પ્રિવ્યૂ</h2>
+      <div id="resumePreview" class="preview">Your AI-generated resume will appear here.</div>
+      <div class="download-row">
+        <button id="downloadHtml">Download HTML</button>
+        <button id="copyHtml" class="secondary">Copy HTML</button>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <div class="container">Built with ❤ — Set <code>OPENAI_API_KEY</code> before deploy</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
